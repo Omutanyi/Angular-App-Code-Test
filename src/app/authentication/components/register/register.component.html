@@ -5,22 +5,29 @@
 <div class="col align-self-center" role="host">
     <div class="row justify-content-evenly">
         <div class="col-4">
-            <img src="https://images.unsplash.com/photo-1509822929063-6b6cfc9b42f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bG9naW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+            <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bG9ja3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
                 class="img-fluid" alt="...">
         </div>
         <div class="col-4">
-            <form>
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
                 <h2>Register</h2>
                 <p class="form-text">Please provide your details to proceed...</p>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" ngModel required #email="ngModel">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1">
+                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" ngModel required #password="ngModel">
+                    <div id="passwordHelpBlock" class="form-text">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                      </div>
                 </div>
-                <button type="submit" class="btn btn-primary mybtn">Register</button>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label form-text" for="exampleCheck1">Show password</label>
+                  </div>
+                <button type="submit" class="btn btn-primary mybtn" [disabled]="f.invalid">Register</button>
 
 
 
