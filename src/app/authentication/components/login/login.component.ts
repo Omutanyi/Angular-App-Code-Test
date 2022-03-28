@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
       error:( err: any) => console.error('Encountered rror: ' + err),
     };
     this.authservice.login(f.value).subscribe(loginObserver);
-    this.router.navigate(['/']);
+    this.router.navigate(['home']);
   }
 
 }
