@@ -1,7 +1,12 @@
 # Frontend Engineer Assessment
 ## Angular App Practical Test - TopUp Mama
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This project was built using [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0. and [Bootstrap](https://getbootstrap.com/) version 5.1.3.
+
+
+![Screenshot of the login page](app_shots/ngApp.png)
+
+## Visit the site at [Frontend Engineer Assessment](https://angular-engineer-assessment.herokuapp.com/)
 
 ## Development server
 
